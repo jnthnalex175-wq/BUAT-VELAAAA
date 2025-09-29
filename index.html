@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<audio autoplay>
+<source src = ".mp3" type ="audio/mp3">
+</audio>
+    <div class="container">
+        <div class="slide active">
+            <div class="content-box">
+                <div class="heart-animation">❤️</div>
+                <h1>Haii sayangggg.</h1>
+                <p>Aku tau aku semalem buat salah sama kamu. Please yah, aku mauu  kasii penjelasan.</p>
+                <button class="next-btn">Klik di sini pwisss</button>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content-box">
+                <div class="emoji">😔</div>
+                <h2>Aku Minta Maaf...</h2>
+                <p>Sayangg maaf banget yah, aku belum bisa buat kamu happy full yang kaya kamu bayangin ituu.</p>
+                <button class="next-btn">Lanjut ya?</button>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content-box">
+                <div class="emoji">💔</div>
+                <h2>Aku Maaf sayang</h2>
+                <p>Aku sadar yang, aku masih banyak kurangnya dan belum bisa ngasi yang terbaik buat kamu. Aku kangen kita yang dulu.</p>
+                <button class="next-btn">Satu lagi...</button>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content-box">
+                <div class="emoji">✨</div>
+                <h2>Kamu cewe yang terbaik</h2>
+                <p>Tapi kamu cewe yang paling aku bisa sayangg banget sama kamu, aku suka kamj dari segi fisik, sifat mu, dan effort kamu juga sayang. Aku gak mau jauh dari kamu sayang.</p>
+                <button class="next-btn">Terus...</button>
+            </div>
+        </div>
+
+        <div class="slide">
+             <div class="content-box">
+                <div class="emoji">🤞</div>
+                <h2>Aku Janji</h2>
+                <p>Aku janji bakal jadi lebih baik lagi buat kamu. Aku janji bakal ngebahagiain kamu sayang.</p>
+                <button class="next-btn">Hampir selesai...</button>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content-box">
+                <div class="emoji">💌</div>
+                <h2>Inget Gak Dulu...</h2>
+                <p>Kita  sblum ldr, hampir setiap hari kita ketemu kan, main terus kesana kisni, hujan hujan bareng waktu itu seru bangett aku sampe kedinginan.Tapi kalo sekarang kita bisa ngulang lagi ngga ya??</p>
+                <button class="next-btn">skaliii lagiii...</button>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content-box">
+                <div class="emoji">🥺</div>
+                <h2>Lovee youuu</h2>
+                <p> sayangg.. akuu bakall brusaha kok buat kamu. Aku masi nabung buat nyusul kamu yah, nanti kitaa main yang jauh jauh.</p>
+                <button class="next-btn">Jawabanmu?</button>
+            </div>
+        </div>
+        
+        <div class="slide">
+            <div class="content-box final-slide">
+                <div class="heart-animation">💖</div>
+                <h2>I Love You</h2>
+                <p>Apapun jawabanmu, aku pokonya selalu sayang terus sama kamu. Selamanya.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const nextBtns = document.querySelectorAll('.next-btn');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+
+        nextBtns.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            });
+        });
+    </script>
+</body>
+</html>
